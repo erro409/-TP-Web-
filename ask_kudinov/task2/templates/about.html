@@ -1,0 +1,14 @@
+<h1>
+<p> Hello, Jack the dog</p></h1>
+
+
+{% for key,data in request.GET.items %}
+{{key}} <br>
+{{data}}
+{% endfor %}
+
+{% for key,data in request.POST.items %}
+{{key}} <br>
+{{data}}
+{% endfor %}
+
