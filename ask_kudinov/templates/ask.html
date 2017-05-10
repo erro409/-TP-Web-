@@ -1,0 +1,25 @@
+{% extends "./base.html" %}
+
+{% block profile %}
+  {% include "./userblock.html" %}
+{% endblock %}
+
+{% block mainColumn %}
+{% load staticfiles %}
+            <div class="row">
+                <h3>New question</h3>
+            </div>
+
+            <form action='{% url 'ask' %}' method='post'>
+               {% csrf_token %}
+               {{ form }}
+		<br>
+            <button type="submit" class="btn btn-primary">Ask</button>
+            </form>
+{% endblock %}
+
+{% block pagination %}
+{% endblock %}
+
+
+        

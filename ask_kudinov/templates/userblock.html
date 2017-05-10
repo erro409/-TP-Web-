@@ -1,0 +1,28 @@
+{% if cookie.value == 1%}
+        <div class="col-md-1">
+            <a class="navbar-brand" href="#">
+                <img src="index_files/images.jpeg" height="90%">
+            </a>
+        </div>
+        <div class="col-md-2">&nbsp&nbsp&nbsp&nbspDr. Pepper
+        <div class="raw">
+            <div class="col-md-6">
+                <a href='{% url 'settings' %}'>settings</a>
+            </div>
+            <div class="col-md-6">
+                <a href="#">log out</a>
+            </div>
+        </div>
+        </div>
+{% else %}
+<div class="col-md-3">&nbsp&nbsp&nbsp&nbspNot LOGINED
+        <div class="raw">
+            <div class="col-md-6">
+                <a href='{% url 'login' %}'>LOGIN</a>
+            </div>
+            <div class="col-md-6">
+                <a href='{% url 'signup' %}'>SIGN UP</a>
+            </div>
+        </div>
+        </div>
+{% endif %}
